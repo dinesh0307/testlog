@@ -23,6 +23,8 @@ public class LogGenerator
         for( int i = 0; i < 10; i++ )
         {
             log.info( "Generating logs for time : " + i );
+            log.info( "time in millis : " + System.currentTimeMillis() );
+            log.info( "date : " + new Date() );
         }
         return "Log generated : " + new Date();
     }
