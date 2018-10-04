@@ -1,5 +1,6 @@
 package com.test.kube.logs.demo.controller;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import org.apache.log4j.Logger;
@@ -25,6 +26,8 @@ public class LogGenerator
             log.info( "Generating logs for time : " + i );
             log.info( "time in millis : " + System.currentTimeMillis() );
             log.info( "date : " + new Date() );
+            log.info( "hour " + Calendar.getInstance().get( Calendar.HOUR_OF_DAY ) );
+            log.info( "minutes " + Calendar.getInstance().get( Calendar.MINUTE )  );
         }
         return "Log generated : " + new Date();
     }
